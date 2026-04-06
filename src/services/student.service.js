@@ -25,10 +25,10 @@ const createStudent = async (studentData) => {
       throw new Error('Gender must be Male or Female');
     }
 
-      const isStatusValid = ['Single', 'Married'].includes(studentData.studentStatus);
-    if (!isStatusValid) {
-      throw new Error('Student status must be Single or Married');
-    }
+    // const isStatusValid = ['Single', 'Married'].includes(studentData.studentStatus);
+    // if (!isStatusValid) {
+    //   throw new Error('Student status must be Single or Married');
+    // }
 
     const isScoreValid = studentData.score >= 0 && studentData.score <= 100;
     if (!isScoreValid) {

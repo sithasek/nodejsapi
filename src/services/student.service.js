@@ -15,7 +15,7 @@ const createStudent = async (studentData) => {
       throw new Error('Password must be at least 8 characters long and contain both letters and numbers');
     }
 
-    const isNameValid = studentData.firstName.trim() !== '' && studentData.lastName.trim() !== '';
+    const isNameValid = studentData.firstName !== '' && studentData.lastName !== '';
     if (!isNameValid) {
       throw new Error('First name and last name cannot be empty');
     }

@@ -28,7 +28,8 @@ const getStudentById = async (req, res) => {
   try {
     const studentId = req.params.id;
     const student = await studentService.getStudentById(studentId);
-    return res.status(200).send({ student });
+    //return res.status(200).send({ student });
+    return res.status(200).json(student);
   } catch (error) {
     return res.status(500).send({ error: error.message });
   }

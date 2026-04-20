@@ -18,7 +18,8 @@ const getProfile = async (req, res) => {
 const getStudentAllStudents = async (req, res) => {
   try {
     const students = await studentService.getAllStudents();
-    return res.status(200).send({ students });
+    //return res.status(200).send({ students });
+    return res.status(200).json(students);
     } catch (error) {
     return res.status(500).send({ error: error.message });
   }
